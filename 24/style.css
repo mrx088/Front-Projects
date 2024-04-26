@@ -1,10 +1,110 @@
+@font-face {
+    font-family: tanha;
+    src: url('./font/Tanha-FD.woff2' ) format("woff2");
+    font-size: normal;
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+:root{
+    --bg-white : #fff
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: tanha;
 }
 
 body{
     height: 100vh;
-    background-color: #333333;
+    background-color: #151515;
 }
+
+ul{
+    list-style: none;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 3rem;
+    margin: 0 auto;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 5rem;
+    color: var(--bg-white);
+}
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(357px,auto));
+    gap: 1rem;
+}
+
+.item{
+    border: 2px solid #464646;
+    padding: 1rem;
+    text-align: center;
+    transform: skewY(-5deg);
+    color: var(--bg-white);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+
+}
+.item:hover{
+    background-color: var(--bg-white);
+    color: black;
+}
+
+.item:hover .item-lists{
+    color: black;
+}
+.item:hover button{
+    background-color: #f36100;
+}
+
+.item-header,.item-price,.item-lists,.item-status,.item button{
+    transform: skewY(5deg);
+    
+}
+.item-header{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    
+}
+.item-price{
+    font-size: 3.5rem;
+    color: #f36100;
+    font-weight: bold;
+}
+
+.item-status{
+    margin-bottom: 2rem;
+    
+}
+.item-lists{
+    color: #c4c4c4;
+}
+
+.item-lists li{
+    margin-bottom: 0.5rem;
+}
+
+.item button {
+    background-color: #333333;
+    border: none;
+    width: 90%;
+    padding:1rem;
+    margin: 1rem;
+    color: var(--bg-white);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
