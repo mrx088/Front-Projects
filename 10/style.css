@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+body{
+    background-color: #3457D5;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    background-color: white;
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px 2px 5px rgb(51, 50, 50);
+}
+.tabs{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 55px;
+    position: relative;
+
+
+}
+
+.tabs label{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #3457D5;
+    height: 100%;
+    width: 95px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.tabs label:hover{
+    background-color: #3457d534;
+
+}
+
+.tabs::after{
+    border-radius: 0.5rem;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 95px;
+    left: var(--afterVar,0px);
+    background-color: #3457D5;
+    transition: all 0.4s ease-in;
+}
+
+label.active{
+    color: white;
+}
+
+.content div.active{
+    display: block;
+}
+
+.box .inputs input#tab-home:checked ~.tabs label.home{
+    color: white;
+    
+}
+.box .inputs input#tab-home:checked ~.tabs::after{
+    left: 0;
+}
+
+.box .inputs input#tab-blog:checked ~.tabs label.blog{
+    color: white;
+}
+.box .inputs input#tab-blog:checked ~.tabs::after{
+    left: 142px;
+}
+
+
+.box .inputs input#tab-code:checked ~.tabs label.code{
+    color: white;
+}
+.box .inputs input#tab-code:checked ~.tabs::after{
+    left: 285px;
+}
+
+
+.box .inputs input#tab-help:checked ~.tabs label.help{
+    color: white;
+}
+
+.box .inputs input#tab-help:checked ~.tabs::after{
+    left: 432px;
+}
+
+.box .inputs input#tab-account:checked ~.tabs label.account{
+    color: white;
+}
+
+.box .inputs input#tab-account:checked ~.tabs::after{
+    left: 575px;
+} 
+
+
+.content div{
+    display: none;
+}
+
+.content div h3{
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.content div p{
+    line-height: 1.6rem;
+}
+
+
+
+
+.box .inputs input#tab-home:checked ~.content div.home{
+    display: block;
+}
+.box .inputs input#tab-blog:checked ~.content div.blog{
+    display: block;
+}
+.box .inputs input#tab-code:checked ~.content div.code{
+    display: block;
+}
+.box .inputs input#tab-help:checked ~.content div.help{
+    display: block;
+}
+.box .inputs input#tab-account:checked ~.content div.account{
+    display: block;
+}
+
+ 
+

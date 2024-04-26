@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'taha';
+    font-weight: normal;
+    font-style: normal;
+    src: url('./fonts//Tanha-FD.woff2') format('woff2');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'taha';
+}
+
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.container{
+    background-image: url('./pexels-quang-nguyen-vinh-2649403.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    padding-top: 5rem;
+    z-index: 1;
+}
+.container::after{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(50deg,rgba(0, 0, 255, 0.301) 20%,rgba(255, 0, 0, 0.534));
+}
+
+
+nav{
+    max-width: 1000px;
+    background-color: rgba(23, 23, 23, 0.51);
+    backdrop-filter: blur(70px);
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+li{
+    padding: 1rem;
+
+}
+
+.main-link > li::after{
+    content: '';
+    border-bottom: 2px solid red;
+    transform: scaleX(0);
+    display: block;
+    transition: all 0.2s ease;
+}
+li:hover::after{
+    transform: scaleX(1);
+}
+
+.control{
+    position: relative;
+}
+.control > ul li{
+    width: 100%;
+}
+.main-link >.control a{
+    margin-left: 0.5rem;
+}
+.main-link >.control::before{
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 0;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    width: 10px;
+    height: 10px;
+    transform: rotate(42deg);
+    margin-right: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+
+.main-link > .control:hover::before{
+    transform: rotate(224deg);
+
+}
+
+.sub-list{
+    position: absolute;
+    background-color: rgba(7, 1, 56, 0.51);
+    backdrop-filter: blur(70px);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    top: 55px;
+    min-width: 170px;
+    align-items: start;
+    border-radius: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.sub-list li{
+    padding: 0.5rem;
+
+}
+
+.control:hover > .sub-list {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.left-sub{
+    right: 170px;
+    top: 10px;
+}
+
+

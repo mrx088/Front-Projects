@@ -1,0 +1,228 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Tilt Neon';
+    background-color: rgb(235, 228, 235);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333333;
+}
+p{
+    color: #333333;
+
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+.navbar{
+    font-weight: 700;
+    display: flex;
+    /* background-color: white; */
+    justify-content: space-between;
+    max-width: 1100px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    border-radius: 0.5rem;
+}
+
+.logo{
+    font-weight: bold;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: rgb(103, 7, 194);
+}
+
+
+.links ul{
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+
+.link{
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.link:hover{
+    color: rgb(103, 7, 194);
+}
+
+.links ul li a.active{
+    background-color: rgb(103, 7, 194);
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+
+}
+
+
+.header-content{
+    height: calc(100vh - 82px);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+    align-content: center;
+    gap: 5rem;
+}
+
+.title1{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.title2,.title3{
+    font-weight: bold;
+}
+.title2{
+    font-size: 2.3rem;
+}
+.title3{
+    color:rgb(103, 7, 194);
+}
+
+p{
+    margin: 1rem 0;
+    line-height: 1.5rem;
+}
+
+form{
+    box-shadow: 0px 0px 2px 2px #c6c9cc;
+    max-width: 400px;
+    display: flex;
+
+}
+
+form input {
+    border: 0;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+}
+
+form button{
+    background-color: rgb(103, 7, 194);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 1rem;
+}
+
+.right-content{
+    position: relative;
+}
+
+.images{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2.5rem;
+    width: 100%;
+    height: 300px;
+}
+
+.secound-img{
+    transform: translateY(-70px);
+}
+
+.Infos{
+    position: absolute;
+    background: linear-gradient(to right , rgba(92, 72, 238,0.6) , rgba(15, 30, 106,0.4));
+    max-width: 300px;
+    width: 100%;
+    top: 63%;
+    left: 50%;
+    transform: translateX(-80px);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(30px);
+
+}
+
+@media screen and (max-width:990px) {
+    .navbar{
+        padding: 1.5rem 0.5rem;
+    }
+    .header-content{
+        grid-template-columns: repeat(1,1fr);
+        padding: 0 0.5rem;
+        
+    }
+
+    .left-content{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .left-content form{
+        margin: 0 auto;
+    }
+
+    .images{
+        justify-items: center;
+        gap:0.5rem ;
+    }
+    img{
+        width: 300px;
+    }
+    p{
+        max-width: 600px;
+        margin: 1rem auto;
+    }
+    
+    
+}
+
+@media screen and (max-width:670px) {
+
+    .navbar{
+        margin-bottom:2rem;
+    }
+
+
+    .links{
+        display: none;
+    }
+    img{
+        width: 150px;
+        height: 300px;
+    }
+
+}
+
+@media screen and (max-width:450px) {
+    .Infos{
+        position: static;
+        transform: translateX(0);
+        margin: 1rem auto;
+    }
+    .logo{
+        font-size: 1.3rem;
+    }
+    .title1{
+        font-size: 1.3rem;
+        
+    }
+    .title2{
+        font-size: 1.5rem;
+        
+    }
+    .title3{
+        font-size: 1.5rem;
+
+    }
+}

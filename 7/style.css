@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(160, 1, 165);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+.container{
+    background-color: white;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0px 0px 10px 0px rgb(102, 101, 101);
+}
+
+.ability{
+    margin-bottom: 2rem;
+}
+
+.ability .par-container {
+    height: 10px;
+    width: 100%;
+    background-color: rgb(211, 206, 206);
+    border-radius: 1rem;
+    margin: 1rem 0;
+    
+}
+
+@keyframes progress_loder {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.progress{
+    background: linear-gradient(to right , rgb(245, 94, 245),rgb(163, 10, 163));
+    height: 100%;
+    border-radius: 1rem;
+    position: relative;
+    animation: progress_loder ease 0.4s forwards;
+}
+.progress.html{
+    width: 90%;
+}
+.progress.css{
+    width: 83%;
+}
+.progress.react{
+    width: 70%;
+}
+.progress.python{
+    width: 80%;
+}
+
+.tooltip{
+    border-radius: 0.5rem;
+    right: -15px;
+    top: -36px;
+    background-color: rgb(194, 67, 194);
+    position: absolute;
+    z-index: 1;
+    padding: 4px;
+    color: white;
+    font-weight: bold;
+
+
+}
+
+
+
+
+.tooltip::before{
+    /* display: inline-block; */
+    right: 50%;
+    top: 21px;
+    content: '';
+    height: 10px;
+    width: 10px;
+    background-color: rgb(194, 67, 194);
+    position: absolute;
+    transform: translateX(50%) rotate(45deg);
+    z-index: -1;
+
+
+
+}

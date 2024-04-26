@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'tanha';
+    src: url('./fonts/Tanha-FD.woff2') format(".woff2");
+    font-size: normal;
+    font-weight: normal;
+}
+
+
+ul{
+    list-style: none;
+    padding: 1rem;
+    width: 5rem;
+    transition: all 0.4s ease;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+body{
+    font-family: tanha;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('./pexels-sohail-nachiti-807598.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+.sidebar{
+    background-color: rgba(27, 27, 27, 0.548);
+    backdrop-filter: blur(11px);
+    border-radius: 0.5rem;
+    border: 2px solid rgb(1, 24, 4);
+    position: relative;
+    padding: 1rem;
+}
+
+ul li{
+    color: #fff;
+    font-size: 1.5rem;
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    margin: 1rem 0;
+    padding: 4px 5px;
+    height: 40px;
+    border-radius: 1rem;
+    white-space: nowrap;
+    position: relative;
+}
+ul li:hover{
+    background-color: white;
+    color: black;
+    
+}
+ul li:hover a{
+    color: black;
+    
+}
+
+ul a{
+    transform: translateX(40px);
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+label::before{
+    top: 15px;
+    left: -15px;
+    border-radius: 100%;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    content: '';
+    position: absolute;
+    cursor: pointer;
+
+}
+
+label::after{
+    top: 23px;
+    left: -4px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    width: 10px;
+    height: 10px;
+    content: '';
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+    transform: rotate(136deg);
+}
+
+#control-sidebar:checked + label+ul{
+    width: 12rem;
+}
+
+#control-sidebar:checked + label + ul li a{
+    opacity: 1;
+    transform: translateX(0);
+}
+#control-sidebar:checked + label::after{
+    left: -9px;
+    transform: rotate(-45deg);
+
+
+}
+
+.status{
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}

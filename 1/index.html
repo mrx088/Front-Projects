@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myweb</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+</head> 
+<body>
+
+    <div class="container">
+        <div class="navbar">
+            <div class="nav-left align-items-center d-flex">
+                <div class="logo">
+                    <img src="./—Pngtree—business logo design free logo_915991.png" alt="">
+                </div>
+                <h4>MyWeb</h4>
+            </div>
+            <div class="nav-center">
+                <ul class="links">
+                    <li><a href="" class="active">Dashboard</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Messages</a></li>
+                    <li><a href="">Aboutus</a> </li>
+                    <li><a href="">Login</a></li>
+                </ul>
+            </div>
+            <div class="nav-right">
+                <div class="icons">
+                    <i class="bi bi-search"></i>
+                    <i class="bi bi-bell"></i>
+                    <i class="bi bi-gear"></i>
+                </div>
+                <div class="profile">
+                    <div class="status">Online</div>
+                    <div class="profile-img">
+                        <img src="./index.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="hamberger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <div class="nav-mobile">
+                <ul>
+                    <li><a href="" >Dashboard</a></li>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Messages</a></li>
+                    <li><a href="">Aboutus</a> </li>
+                    <li><a href="">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+
+    <script>
+        let hamberger = document.querySelector('.hamberger')
+        let navMobile = document.querySelector('.nav-mobile')
+        hamberger.addEventListener('click',()=>{
+            navMobile.classList.toggle('show')
+            
+        })
+    </script>
+</body>
+</html>

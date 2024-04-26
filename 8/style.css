@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'google';
+    font-style: normal;
+    font-weight: normal;
+    src: url('./font/BebasNeue-Regular.ttf') format('truetype');
+}
+
+body{
+    font-family: google;
+    background: linear-gradient(75deg,rgb(156, 196, 243),white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    gap: 2rem;
+    
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    cursor: pointer;
+    position: relative;
+    
+}
+.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    transition: all 0.2s cubic-bezier( 0.68, -0.55, 0.27, 1.24 );
+    box-shadow: 0px 0px 10px #acabab;
+
+
+
+}
+.social i{
+    font-size: 2rem;
+}
+.title{
+    top: 10px;
+    left: 50%;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%);
+    transition: all 0.4s cubic-bezier( 0.68, -0.55, 0.27, 1.24 );
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.title::before{
+    z-index: -1;
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom:  -5px;
+    width: 15px;
+    height: 15px;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+.social:hover > .title{
+    opacity: 1;
+    top: -70px;
+    color: white;
+}
+
+.container .social:nth-child(1) >.title,.container .social:nth-child(1) >.title::before , .container .social:nth-child(1) > .icon:hover  {
+    background-color: rgb(255, 0, 221);
+    color: white;
+}
+.container .social:nth-child(2) >.title,.container .social:nth-child(2) >.title::before , .container .social:nth-child(2) > .icon:hover  {
+    background-color: rgb(19, 32, 151);
+    color: white;
+}
+.container .social:nth-child(3) >.title,.container .social:nth-child(3) >.title::before , .container .social:nth-child(3) > .icon:hover  {
+    background-color: rgb(0, 213, 228);
+    color: white;
+}
+.container .social:nth-child(4) >.title,.container .social:nth-child(4) >.title::before , .container .social:nth-child(4) > .icon:hover  {
+    background-color: rgb(255, 123, 0);
+    color: white;
+}
+.container .social:nth-child(5) >.title,.container .social:nth-child(5) >.title::before , .container .social:nth-child(5) > .icon:hover  {
+    background-color: rgb(236, 6, 6);
+    color: white;
+}
+

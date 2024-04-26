@@ -1,0 +1,36 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.box1{
+    background-color: red;
+}
+
+.Boxxxx{
+    background-color: rgb(110, 226, 43);
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    
+}
+
+
+.box span{
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(20, 141, 197);
+    /* display: block; */
+    position: absolute;
+    z-index: 3;
+
+}
